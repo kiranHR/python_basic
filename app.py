@@ -1,5 +1,6 @@
-n = 10
-if n%2 == 0:
-	print("Even")
-else:
-	print("odd")
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def hi():
+    return 'Hello!'
